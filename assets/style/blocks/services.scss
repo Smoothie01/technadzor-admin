@@ -1,0 +1,20 @@
+@import "assets/style/variabless";
+.services{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+}
+.balance{
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  background-color: $lightBlue;
+  justify-content: space-between;
+  .title{
+    font-weight: 700;
+  }
+}
+.card-content{
+  height: 100%;
+}
