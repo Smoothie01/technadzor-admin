@@ -3,7 +3,6 @@
     <a-card class="card">
       <div class="head">
         <h1 class="title">Новый раздел</h1>
-        <a-button type="primary">Добавить</a-button>
       </div>
     </a-card>
     <a-card class="card-content">

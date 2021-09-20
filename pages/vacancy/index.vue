@@ -15,7 +15,7 @@
 <script>
 export default {
   head: () => ({
-    title: 'Подтверждение поставщика'
+    title: 'Резюме/Ваканси'
   }),
   data: () => ({
     columns:
@@ -33,7 +33,7 @@ export default {
         {
           title: 'Категория',
           dataIndex: 'category',
-          key: 'description'
+          key: 'category'
         },
         {
           title: 'Описание',

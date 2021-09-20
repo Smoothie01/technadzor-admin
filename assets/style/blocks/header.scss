@@ -18,6 +18,9 @@
   width: 200px;
   font-size: 14px;
   background-color: $lightBlue;
+  @media (max-width: $mobile) {
+    background-color: inherit;
+  }
 }
 .logout{
   color: $dark;
@@ -28,6 +31,18 @@
   gap: 15px;
   align-items: center;
   padding: 0 15px;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  &-mobile{
+    display: none;
+    @media (max-width: $mobile) {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding: 0 5px;
+    }
+  }
 }
 .menu{
   font-size: 20px;

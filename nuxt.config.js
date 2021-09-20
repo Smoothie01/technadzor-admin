@@ -1,6 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    ssr: true,
+    target: 'server',
     title: 'admin-tech-nadzor',
     meta: [
       { charset: 'utf-8' },
@@ -18,6 +20,8 @@ export default {
     'ant-design-vue/dist/antd.css',
     '@/assets/style/main'
   ],
+
+  loading: '@/components/LoadingVue',
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -38,19 +42,21 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'cookie-universal-nuxt',
+    ['cookie-universal-nuxt', { alias: 'cookiz' }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
+  axios: {
+    baseURL: 'http://backtech.test-vip.kz/api'
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en'
     }
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
 }

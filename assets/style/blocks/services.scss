@@ -18,3 +18,33 @@
 .card-content{
   height: 100%;
 }
+
+.contact-content{
+  p{
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+.price-content{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.price-row{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  .text{
+    background-color: $lightBlue;
+    text-align: center;
+    padding: 20px 0;
+    &.price{
+      width: 180px;
+    }
+    &.value{
+      width: 230px;
+    }
+  }
+}

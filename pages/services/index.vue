@@ -6,7 +6,7 @@
         <a-button type="primary">Добавить услугу</a-button>
       </div>
     </a-card>
-    <a-card class="card">
+    <a-card>
       <a-table :columns="columns" :data-source="data">
       </a-table>
     </a-card>

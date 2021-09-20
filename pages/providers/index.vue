@@ -38,7 +38,7 @@ export default {
     columns:
       [
         {
-          dataIndex: 'category',
+          dataIndex: 'checkbox',
           key: 'checkbox',
           slots: { title: 'allCheckbox' },
           scopedSlots: { customRender: 'checkbox' }
@@ -90,6 +90,17 @@ export default {
       }
     ]
   }),
+  computed: {
+    tabCheckbox () {
+      let count = 0
+      for (const item of this.data) {
+        if (item.checked) {
+          count++
+        }
+      }
+      return this.data.length === count
+    }
+  },
   methods: {
     select (checked) {
       this.data.forEach((item) => {
@@ -104,21 +115,6 @@ export default {
         this.$set(item, 'checked', event.checked)
       })
       console.log(this.data)
-    }
-  },
-  computed: {
-    tabCheckbox () {
-      let count = 0
-      for (const item of this.data) {
-        if (item.checked) {
-          count++
-        }
-      }
-      if (this.data.length === count) {
-        return true
-      } else {
-        return false
-      }
     }
   }
 }

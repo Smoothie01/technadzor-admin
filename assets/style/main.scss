@@ -7,6 +7,9 @@ body{
   min-height: 100vh;
   width: 100%;
   background-color: $lightBlue;
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
 }
 .ant-btn{
   font-size: 16px;
@@ -22,9 +25,33 @@ body{
 .title{
   font-size: 24px;
 }
+
+  .ant-card-body{
+    overflow-x: auto;
+    @media (max-width: 768px) {
+      padding: 7px;
+    }
+}
 .card{
+  @media (max-width: $mobile) {
+    background-color: inherit;
+    border: none;
+  }
   .head{
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+.ant-layout-has-sider{
+  overflow: hidden;
 }
